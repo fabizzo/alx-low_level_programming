@@ -6,7 +6,8 @@
 /* betty style doc for function main goes there */
 /**
  * main - Print the positive negative and zero number
- * return: 0 (Success)
+ *
+ * Return: 0 (Success)
  */
 int main(void)
 {
