@@ -1,0 +1,27 @@
+ #include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	char c;
+
+	int d;
+
+	c = 'a';
+	while
+		(d < 10) {
+			pitchar(d + '0');
+			d++;
+		}
+	while
+		(c <= 'f') {
+			putchar(c);
+			c++;
+		}
+	putchar('\n');
+	return (0);
+}
