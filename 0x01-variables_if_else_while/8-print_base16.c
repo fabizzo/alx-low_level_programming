@@ -14,7 +14,7 @@ int main(void)
 	c = 'a';
 	while
 		(d < 10) {
-			pitchar(d + '0');
+			putchar(d + '0');
 			d++;
 		}
 	while
