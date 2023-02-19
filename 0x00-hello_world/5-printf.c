@@ -1,5 +1,6 @@
  #include <stdio.h>
 /**Main - a c programming that prints followed by a new line
+ *
  * Return: 0 (Success)
  */
 int main(void)
