@@ -3,17 +3,21 @@
 /**
  * print alpha 10 times
  *
+ * Return void
  */
 
 void print_alphabet_x10(void)
 {
-	int ten;
-	char la;
+	char c;
+	int i = 0;
 
-	for (ten = 0; ten = 0; la <= 'z'; la++)
+	while (i <= 9)
 	{
-		_putchar(la);
-
+		for (c = 'a'; c <= 'z'; c++)
+		{
+		_putchar(c);
+		}
 		_putchar('\n');
+		i++;
 	}
 }
