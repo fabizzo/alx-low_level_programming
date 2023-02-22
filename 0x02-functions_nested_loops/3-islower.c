@@ -2,8 +2,8 @@
 
 /**
  * main - checks for lowercase character
- *
- * Return: 1 (Success)
+ *@c: The character to be checked
+ * Return: 1 for lowercase character or 0for anything else
 */
 
 int _islower(int c)
