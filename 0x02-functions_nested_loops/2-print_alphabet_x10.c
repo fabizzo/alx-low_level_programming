@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print alpha 10 times
+ * print - alpha 10 times
  *
  * Return: void
  */
