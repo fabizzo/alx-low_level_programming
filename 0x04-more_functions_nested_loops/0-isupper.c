@@ -1,6 +1,4 @@
 #include "main.h"
-#include <ctype.h>
-#include <stdio.h>
 
 /**
  * main - uppercase letters
