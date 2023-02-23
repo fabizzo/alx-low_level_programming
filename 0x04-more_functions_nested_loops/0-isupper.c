@@ -3,18 +3,18 @@
 #include <stdio.h>
 
 /**
- * _isupper - uppercase letters
+ * main - uppercase letters
  *
  *@c: char to check
  *
  * Return: 0 or 1
  */
 
-int main()
+int main(void)
 {
 	char ch = 'C';
 
-	if (isupper(ch) >= 'C')
+	if (isupper(ch))
 		return (1);
 	else
 		return (0);
