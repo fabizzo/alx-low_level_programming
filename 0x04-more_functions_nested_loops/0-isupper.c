@@ -10,11 +10,11 @@
  * Return: 0 or 1
  */
 
-int main(void)
+int _isupper(void)
 {
-	char ch = 'C';
+	int ch = 'C';
 
-	if (isupper(ch))
+	if (c >= 'A' && c <= 'Z' ) 
 		return (1);
 	else
 		return (0);
