@@ -13,15 +13,11 @@ void print_most_numbers(void)
 
 	for (x = 8; x++;)
 	{
-	if (x != || x != 4)
+	if (x != 2 && x != 4)
 	{
-		continue;
-	}
-	}
-	if
-		(putchar(x));
-
-	else
+		putchar(x);
 		putchar('\n');
+	}
+	}
 }
 
