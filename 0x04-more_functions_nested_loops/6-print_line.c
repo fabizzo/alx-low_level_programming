@@ -7,7 +7,7 @@
  * Return: Empty
  */
 
-void printline(int n)
+void print_line(int n)
 {
 	int x;
 
@@ -17,9 +17,9 @@ void printline(int n)
 	}
 	else
 	{
-	for (x = 0; x < n; x++)
+	for (x = 1; x < n; x++)
 	{
-	putchar(95);
+	putchar('_');
 	}
 	putchar('\n');
 	}
