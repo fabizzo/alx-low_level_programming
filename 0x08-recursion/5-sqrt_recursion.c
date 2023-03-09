@@ -15,31 +15,23 @@ int _sqrt_recursion(int n)
 
 	return (1);
 }
+
 /**
- * _sqrt_recursive - squares a number
+ * sqrt_recursive - Recursively finds the square root of a number.
  *
- * @n: The number to be squared
- * @i: The current guess for the square root
- * @start: the starting value to check for the square root
- * @end: the ending value to check for the square root
+ * @n: The number to calculate the square root of.
+ * @i: The current guess for the square root.
  *
- * Return: Returns the square root of a number
+ * Return: If i * i == n, return i.
+ *         If i * i > n, return -1.
+ *         Otherwise, return sqrt_recursive(n, i + 1).
  */
-int _sqrt_recursive(int n, int start, int end)
+int sqrt_recursive(int n, int i)
 {
-	int mid, sq;
+	if (i * i == n)
+	return (i);
+	if (i * i > n)
+	return (-1);
 
-	if (end < start)
-		return (-1);
-
-	mid = (start + end) / 2;
-	sq = mid * mid;
-
-	if (sq == n)
-		return (mid);
-
-	if (sq > n)
-		return (_sqrt_recursive(n, start, mid - 1));
-
-	return (_sqrt_recursive(n, mid + 1, end));
+	return (sqrt_recursive(n, i + 1));
 }
