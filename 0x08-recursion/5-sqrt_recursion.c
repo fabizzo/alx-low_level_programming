@@ -17,7 +17,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * sqrt_recursive - Recursively finds the square root of a number.
+ * sqrt_recursion - Recursively finds the square root of a number.
  *
  * @n: The number to calculate the square root of.
  * @i: The current guess for the square root.
@@ -26,12 +26,12 @@ int _sqrt_recursion(int n)
  *         If i * i > n, return -1.
  *         Otherwise, return sqrt_recursive(n, i + 1).
  */
-int sqrt_recursive(int n, int i)
+int sqrt_recursion(int n, int i)
 {
 	if (i * i == n)
 	return (i);
 	if (i * i > n)
 	return (-1);
 
-	return (sqrt_recursive(n, i + 1));
+	return (sqrt_recursion(n, i + 1));
 }
