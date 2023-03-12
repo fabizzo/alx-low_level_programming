@@ -9,13 +9,12 @@
  */
 void _puts(char *str)
 {
-        /* loop through each character in the string and print it */
-        while (*str != '\0')
-        {
-                putchar(*str);
-                str++;
-        }
-        putchar('\n'); /* print a newline character at the end */
+	while (*str != '\0')
+	{
+		putchar(*str);
+		str++;
+	}
+	putchar('\n');
 }
 
 /**
@@ -25,6 +24,6 @@ void _puts(char *str)
  */
 int main(void)
 {
-        _puts("\"Programming is like building a multilingual puzzle");
-        return (0);
+	_puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
