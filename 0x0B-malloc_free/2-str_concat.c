@@ -1,54 +1,51 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
- * str_concat - concatenates two strings
- * @s1: first string to concatenate
- * @s2: second string to concatenate
- * Return: pointer to newly allocated space in memory or NULL on failure
- */
+ * str_concat - get ends of input and add together for size
+ * @s1: input one to concat
+ * @s2: input two to concat
+ * Return: concat of s1 and s2
+*/
 
 char *str_concat(char *s1, char *s2)
 {
-	char *concat_str;
-	int len1 = 0, len2 = 0, i, j;
+	char *conct;
+	int i, ci;
 
 	if (s1 == NULL)
+	{
 		s1 = "";
+	}
 	if (s2 == NULL)
+	{
 		s2 = "";
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+		i = ci = 0;
+	}
+	while (s1[i] != '\0')
+		i++;
 
-	concat_str = malloc(sizeof(char) * (len1 + len2 + 1));
-	if (concat_str == NULL)
+	while (s2[ci] != '\0')
+		ci++;
+
+	conct = malloc(sizeof(char) * (i + ci + 1));
+	if (conct == NULL)
+
 		return (NULL);
 
-	for (i = 0; i < len1; i++)
-	concat_str[i] = s1[i];
+	i = ci = 0;
 
-	for (j = 0; j < len2; j++)
-		concat_str[i + j] = s2[j];
-
-	concat_str[i + j] = '\0';
-
-	return (concat_str);
-}
-
-/**
- * _strlen - calculates the length of a string
- * @s: string to calculate length of
- * Return: length of string
- */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
+	while (s1[i] != '\0')
 	{
-		len++;
-		s++;
+		conct[i] = s1[i];
+		i++;
 	}
-
-	return (len);
+	while (s2[ci] != '\0')
+	{
+	conct[i] = s2[ci];
+	i++;
+	ci++;
+	}
+	conct[i] = '\0';
+	return (conct);
 }
