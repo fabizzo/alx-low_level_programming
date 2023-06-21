@@ -1,32 +1,52 @@
-#include "function_pointers.h"
 #include <stdio.h>
+#include "function_pointers.h"
+
 /**
- * print_name - print name using pointer to function
- * @name: string to add
- * @f: pointer to function
- * Return: nothing
- **/
-void print_name(char *name, void (*f)(char *))
+ * print_name_as_is - prints a name as is
+ * @name: name of the person
+ *
+ * Return: Nothing.
+ */
+void print_name_as_is(char *name)
 {
-	if (name == NULL || f == NULL)
-		return;
-
-	f(name);
-}
-void print_uppercase(char *name)
-{
-    printf("Name in uppercase: %s\n", name);
+    printf("Hello, my name is %s\n", name);
 }
 
-void print_lowercase(char *name)
+/**
+ * print_name_uppercase - print a name in uppercase
+ * @name: name of the person
+ *
+ * Return: Nothing.
+ */
+void print_name_uppercase(char *name)
 {
-    printf("Name in lowercase: %s\n", name);
+    unsigned int i;
+
+    printf("Hello, my uppercase name is ");
+    i = 0;
+    while (name[i])
+    {
+        if (name[i] >= 'a' && name[i] <= 'z')
+        {
+            putchar(name[i] + 'A' - 'a');
+        }
+        else
+        {
+            putchar(name[i]);
+        }
+        i++;
+    }
 }
 
-int main()
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-    char name[] = "John Doe";
-    print_name(name, print_uppercase);
-    print_name(name, print_lowercase);
-    return 0;
-}
+    print_name("Bob", print_name_as_is);
+    print_name("Bob Dylan", print_name_uppercase);
+    printf("\n");
+    return (0);
+}}
