@@ -13,4 +13,20 @@ void print_name(char *name, void (*f)(char *))
 
 	f(name);
 }
+void print_uppercase(char *name)
+{
+    printf("Name in uppercase: %s\n", name);
+}
 
+void print_lowercase(char *name)
+{
+    printf("Name in lowercase: %s\n", name);
+}
+
+int main()
+{
+    char name[] = "John Doe";
+    print_name(name, print_uppercase);
+    print_name(name, print_lowercase);
+    return 0;
+}
